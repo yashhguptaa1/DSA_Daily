@@ -28,9 +28,9 @@ public class Solution {
     // tests
     @Test
     public void priceGoesUpThenDownTest() {
-        int ip[][]={{2}};
+        int ip[][]={{1,2,3},{4,5,6},{7,8,9}};
         final String actual = rotate(ip);
-        final String expected = "";
+        final String expected = "  ";
         assertEquals(expected, actual);
     } @Test
     public void priceGoesDownThenUpTest() {
