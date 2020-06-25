@@ -88,5 +88,6 @@ public class Solution {
             System.out.println(failure.toString());
         } if (result.wasSuccessful()) {
             System.out.println("All tests passed.");
-        } }
+        }
+    }
 }

@@ -1,4 +1,4 @@
-package Unit2_Arrays.LC189_RotateArray;
+package Unit2_Arrays.Easy.LC189_RotateArray;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
@@ -10,7 +10,7 @@ import java.util.Arrays;
 import static junit.framework.TestCase.failNotEquals;
 import static org.junit.Assert.assertEquals;
 
-public class NaiveSolution {
+public class OptimizedSolution {
 
     public void checkArrayEquality(String message,int expected[],int actual[]) {
         if(Arrays.equals(expected,actual))
@@ -35,20 +35,29 @@ public class NaiveSolution {
         if(n==0 || k==0)
             return nums;
 
-        //k=k%n;
+        //Gives ArrayIndexOutOfBoundsException for k greater than n
+        k=k%n;
 
-        while(k-- > 0)
-        {
-            int rotateElement=nums[n-1];
+        reverseArr(nums,0,n-k);
+        reverseArr(nums,n-k,n);
+        reverseArr(nums,0,n);
 
-            for(int i=n-1;i>0;i--)
-            {
-                nums[i]=nums[i-1];
-
-            }
-            nums[0]=rotateElement;
-        }
         return nums;
+
+
+    }
+    public void reverseArr(int arr[],int st,int end)
+    {
+        int left=st;
+        int right=end-1;
+        while(left<right)
+        {
+            int temp=arr[left];
+            arr[left]=arr[right];
+            arr[right]=temp;
+            left++;
+            right--;
+        }
 
     }
     // tests
@@ -93,10 +102,18 @@ public class NaiveSolution {
         //final int expected[] = new int[]{4};// prints wrong answer
         checkArrayEquality("Wrong Answer",expected, actual);
     }
+    @Test
+    public void kZero() {
+        int ip[]=new int[]{1,2,3,4,5,6,7};
+        final int actual[]=rotate(ip,0);
+        final int expected[] = new int[]{1,2,3,4,5,6,7};
+        //final int expected[] = new int[]{4};// prints wrong answer
+        checkArrayEquality("Wrong Answer",expected, actual);
+    }
 
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(Unit2_Arrays.LC189_RotateArray.NaiveSolution.class);
+        Result result = JUnitCore.runClasses(Unit2_Arrays.Easy.LC189_RotateArray.OptimizedSolution.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         } if (result.wasSuccessful()) {
@@ -104,3 +121,4 @@ public class NaiveSolution {
         }
     }
 }
+
