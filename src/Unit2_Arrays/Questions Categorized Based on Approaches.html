@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Possible Approaches</title>
+</head>
+<body>
+<h2>APPROACH 1 </h2>
+<h4>Using Algorithmic Paradigm : Recursion </h4>
+<h6>TC : can range from O(logn){binary search} to exponential </h6>
+<h6>SC : Depends on question</h6>
+<p><b>Intution</b><br>
+    It is generally used to obtain brute force solution to questions
+</p>
+
+<h2>APPROACH 2</h2>
+<h4>Using Algorithmic Paradigm : Sorting (using Arrays.sort() OR can implement custom sort using Comparator)</h4>
+<h6>TC : O(nlogn) </h6>
+<h6>SC : Depends on question</h6>
+<p><b>Intution</b><br>
+    Note to only use sorting if rearranging the index of elements doesnt affect the solution
+</p>
+
+<h2>APPROACH 3</h2>
+<h4>Using Algorithmic Paradigm : Traversing the array from Right Side  </h4>
+<h6>TC : O(n) </h6>
+<h6>SC : O(1) </h6>
+<p><b>Intution</b><br>
+
+</p>
+<h2>APPROACH 4</h2>
+<h4>Using Algorithmic Paradigm : Two Pointer Approach </h4>
+<h6>TC : O(n) || O(nlogn) if sorting is necessary </h6>
+<h6>SC : O(1) when using only two pointer START , END || O(n) when using Sliding window with help of hashing (HashSet/HasMap) </h6>
+<p><b>Intution</b><br>
+Two Pointer approach can be further categorized as
+    Using A pointer Start at beginning of array, and a Pointer end that points at end of array
+    and we use them till they meet somewhere in middle
+
+
+    Start pointer is used to denote beginning of window
+    End pointer is used to denote end of window
+    Now the window slides over array to fulfill the constraint(maximum something/minimum something)
+</p>
+<h2>APPROACH 5</h2>
+<h4>Using Algorithmic Paradigm : Dynamic Programming </h4>
+<h6>TC : O(n^2) </h6>
+<h6>SC : O(n) Use of any array to store LIS values at each index.</h6>
+
+<p><b>Intution</b><br>
+    In Dynamic programming we have to to categorize based on structure of subproblems.
+    For Arrays we can divide into subproblems on basis of index.
+    Thus our dp cache stores the required optimal result that can be obtained till current index
+    Shape of subproblem We try each item as an ending to an LIS, and for each item,
+    we try extending the historical best LIS ending at that item.
+
+    When Used Approach1 Recursion
+    Usage of recursion succcessfully to solve a problem indicates that the
+    problem has optimal substructure present
+
+    Now check the tree of recursive calls.If found any function with same arguments being called twice or more in seperate nodes
+    then we get a problem with overlapping subproblems
+</p>
+<table border="1px solid black">
+    <tr>
+        <th>QuestionName</th>
+        <th>Link on github</th>
+        <th>Solved On</th>
+        <th>Revised On</th>
+
+    </tr>
+    <tr>
+        <td>5. Longest Increasing Subsequence</td>
+        <td>To be added</td>
+        <td>1 Jul 2020</td>
+        <td>none</td>
+    </tr>
+    <tr>
+        <td>334. Increasing Triplet Subsequence</td>
+        <td>to be added</td>
+        <td>1 Jul 2020</td>
+        <td>none</td>
+    </tr>
+
+
+</table>
+
+<h2>APPROACH 6</h2>
+<h4>Using Algorithmic Paradigm : Dynamic Programming AND Using Algorithmic Paradigm : Binary Search</h4>
+<h6>TC : O(nlogn) </h6>
+<h6>SC : O(n) Use of any array to store LIS values at each index.</h6>
+
+<table border="1px solid black">
+    <tr>
+        <th>QuestionName</th>
+        <th>Link on github</th>
+        <th>Solved On</th>
+        <th>Revised On</th>
+
+    </tr>
+    <tr>
+        <td>5. Longest Increasing Subsequence</td>
+        <td>To be added</td>
+        <td>1 Jul 2020</td>
+        <td>none</td>
+    </tr>
+    <tr>
+        <td>334. Increasing Triplet Subsequence</td>
+        <td>to be added</td>
+        <td>1 Jul 2020</td>
+        <td>none</td>
+    </tr>
+
+
+</table>
+
+<h2>APPROACH 7</h2>
+<h4>Using Algorithmic Paradigm : Greedy </h4>
+<h6>TC : O(n) OR sometimes O(nlogn) when using sorting </h6>
+<h6>SC : O(1) </h6>
+<p><b>Intution</b><br>
+    Choose the best answer at each iteration
+</p>
+
+<table border="1px solid black">
+    <tr>
+        <th>QuestionName</th>
+        <th>Link on github</th>
+        <th>Solved On</th>
+        <th>Revised On</th>
+
+    </tr>
+    <tr>
+        <td>5. Longest Increasing Subsequence</td>
+        <td>To be added</td>
+        <td>1 Jul 2020</td>
+        <td>none</td>
+    </tr>
+    <tr>
+        <td>334. Increasing Triplet Subsequence</td>
+        <td>to be added</td>
+        <td>1 Jul 2020</td>
+        <td>none</td>
+    </tr>
+
+    <h2>APPROACH 8</h2>
+    <h4>Using Algorithmic Paradigm : Binary Search </h4>
+    <h6>TC : O(logn) </h6>
+    <h6>SC : O(1) </h6>
+    <p><b>Intution</b><br>
+        remember the array must be sorted
+    </p>
+
+    <h2>APPROACH 9</h2>
+    <h4>Using Algorithmic Paradigm : Taking Help of any Data Structures from Collections Framework in java </h4>
+    <h6>TC : Depends on Question </h6>
+    <h6>SC : O(n) in most of cases </h6>
+    <p><b>Intution</b><br>
+        It is used to reduce Time Complexity, whereas Space Complexity increases(Space time tradeoff)
+        <i>For questions related to this refer to their respective units</i>
+    </p>
+
+</table>
+
+
+</body>
+</html>
